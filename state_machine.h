@@ -1,10 +1,10 @@
-#ifndef FSM_H
-#define FSM_H
+#ifndef STATE_MACHINE_H
+#define STATE_MACHINE_H
 
 #include <systemc.h>
 
 // TODO
 
-#endif // FSM_H
+#endif // STATE_MACHINE_H
 
 

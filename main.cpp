@@ -1,16 +1,14 @@
-#include <systemc.h>
 #include <iostream>
-#include <state_machine.h>
-#include <stimuli.h>
+#include <systemc.h>
 
-using namespace std;
+#include "state_machine.h"
+#include "stimuli.h"
 
-int sc_main(int argc, char* argv[])
-
+int sc_main(int, char**)
 {
     stateMachine genomeParser("genomeParser");
     stimuli genomeInput("genomeInput");
-    sc_clock clk("clk",sc_time(1,SC_NS));
+    sc_clock clk("clk", sc_time(1, SC_NS));
 
     sc_signal<char> h1;
 
@@ -20,5 +18,6 @@ int sc_main(int argc, char* argv[])
     genomeInput.clk.bind(clk);
 
     sc_start();
+
     return 0;
 }
